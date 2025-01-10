@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>acpaintsph</title>
+    <link href="https://fonts.googleapis.com/css?family=Merienda" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link rel="stylesheet" href="acpaints.css">
+    <link rel="stylesheet" type="text/css" href="slidestyle.css">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="javascript.js">
+
+    <script src="acpaints.js"></script>
+
+</head>
+<body>
+    <nav>
+        <img class="logo" src="images/img3.png">
+        <ul class="list">
+            <li><a class="options" href="acpaints.html"> Home </a></li>
+            <li><a class="options" href="#portrait"> Portrait</a></li>
+            <li><a class="options" href="#painting"> Painting </a></li>
+            <li><a class="options" href="#sketch"> Sketch </a></li>
+            <li><a class="options" href="#artist"> Artist </a></li>
+        </ul>
+        
+        <!-- Icon -->
+        <div class="social-icons">
+            <a class="icon linkedin" href="#">
+                <i class="fa-brands fa-linkedin"></i>
+            </a>
+            <a class="icon instagram" href="https://www.instagram.com/acpaintsph/">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a class="icon tiktok" href="#">
+                <i class="fa-brands fa-tiktok"></i>
+            </a>
+            <a class="icon facebook" href="#">
+                <i class="fa-brands fa-facebook"></i>
+            </a>
+
+            <button class="icon bars" onclick="toggleBodyBar()">
+                <i class="fa-solid fa-bars"></i>
+            </button>   
+            
+        </div>
+
+    </nav>
+
+    <!-- start signup -->
+<div class="bodybar">        
+
+    <div class="mainbar">
+        <input type="checkbox" id="chk" aria-hidden="true">
+
+        <div class="card-body"> <!--del-->
+        <form action="connect.php" autocomplete="off" method="post">
+
+        <div class="signup">
+            <form>
+                <label for="chk" aria-hidden="true"> Sign up</label>
+                <input type="text" name="username" id="username" placeholder="User name" autocomplete="false" required>
+                <input type="email" name="email" id="email"placeholder="Email" autocomplete="false" required>
+                <input type="Password" name="password" id="password" placeholder="Password" autocomplete="false" required>       
+                <button> Signup </button>
+            </form>
+        </div>
+
+        <div class="login">
+            <form>
+                <label for="chk" aria-hidden="true"> Login </label>
+                <input type="text" name="username" id="username" placeholder="User name" autocomplete="false" required>
+                <input type="Password" name="password" id="password" placeholder="Password" autocomplete="false" required>
+                <button> Login</button>
+            </form>
+        </div>
+
+     </div>    
+</div> 
+</div> <!--del-->
+
+<!--end signup-->
+
+    <div class="slider">
+        <div class="slide-track">
+            <!-- First set of slides -->
+            <div class="slide">
+                <img class="carousel" src="images/paints2.jpg">
+            </div>
+            <div class="slide">
+                <img class="carousel" src="images/paints3.jpg">
+            </div>
+            <div class="slide">
+                <img class="carousel" src="images/paints5.jpg">
+            </div>
+            <div class="slide">
+                <img class="carousel" src="images/paints6.jpg">
+            </div>
+            <div class="slide">
+                <img class="carousel" src="images/paints7.jpg">
+            </div>
+            <div class="slide">
+                <img class="carousel" src="images/paints8.jpeg">
+            </div>
+
+            <!-- Second set of slides -->
+            <div class="slide">
+                <img class="carousel" src="images/paints2.jpg">
+            </div>
+            <div class="slide">
+                <img class="carousel" src="images/paints3.jpg">
+            </div>
+            <div class="slide">
+                <img class="carousel" src="images/paints5.jpg">
+            </div>
+            <div class="slide">
+                <img class="carousel" src="images/paints6.jpg">
+            </div>
+            <div class="slide">
+                <img class="carousel" src="images/paints7.jpg">
+            </div>
+            <div class="slide">
+                <img class="carousel" src="images/paints8.jpeg">
+            </div>
+        </div>
+    </div>
+
+    <div class="contain">
+        <div class="typed-out"><br><br>Welcome to acpaintsph!</div>
+        <p>Discover a world of creativity and expression at Arielle's Gallery. Immerse yourself in captivating artworks that reflect beauty, emotion, and imagination. From stunning landscapes to thought-provoking abstracts, each piece tells a unique story.
+
+            Explore our curated collection and find the perfect artwork to complement your space or inspire your soul. Whether you're an art enthusiast, collector, or looking for a special gift, our gallery offers a diverse selection to suit every taste.
+            
+            Visit us today and experience art that speaks to you. Each piece is available for purchase, allowing you to bring home a piece of artistic brilliance. Let us help you find that perfect artwork that resonates with your vision.</p>
+    </div>
+
+
+    <!--sections for scrolling -->
+
+    <div id="section"> 
+   
+    <div id="portrait">
+
+        <h1><br>~ P   o   r   t   r   a   i   t ~ </h1>
+        <h6>"Capturing Moments, Revealing Souls." </h6>
+       
+    <div class="frames-container">
+
+        <div class="frame">
+            <div class="border">
+              <div class="image">
+                <img src="images/port1.png" height="275" width="auto" alt="" />
+            </div><!--end image-->
+              <div class="text">&nbsp; &nbsp;Carmelita</div>
+            </div><!--end border-->
+          </div><!--end frame-->
+
+          <div class="frame">
+            <div class="border">
+              <div class="image">
+                <img src="images/port2.png" height="275" width="auto" alt="" />
+            </div><!--end image-->
+              <div class="text">&nbsp;&nbsp;Kim Seon Ho</div>
+            </div><!--end border-->
+          </div><!--end frame-->
+
+          <div class="frame">
+            <div class="border">
+              <div class="image">
+                <img src="images/port4.png" height="275" width="auto" alt="" />
+            </div><!--end image-->
+              <div class="text"> &nbsp; &nbsp; &nbsp; &nbsp;Louise</div>
+            </div><!--end border-->
+          </div><!--end frame-->
+          
+          <div class="frame">
+            <div class="border">
+              <div class="image">
+                <img src="images/port3.png" height="275" width="auto" alt="" />
+            </div><!--end image-->
+              <div class="text">&nbsp;&nbsp;&nbsp;Meghan Fox</div>
+            </div><!--end border-->
+          </div><!--end frame-->          
+
+          <div class="frame">
+            <div class="border">
+              <div class="image">
+                <img src="images/port5.jpg" height="275" width="auto" alt="" />
+            </div><!--end image-->
+              <div class="text">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Lily</div>
+            </div><!--end border-->
+          </div><!--end frame-->  
+
+          <div class="frame">
+            <div class="border">
+              <div class="image">
+                <img src="images/port6.jpg" height="275" width="auto" alt="" />
+            </div><!--end image-->
+              <div class="text">&nbsp;&nbsp;&nbsp;Wurtzbach</div>
+            </div><!--end border-->
+          </div><!--end frame-->  
+
+          <div class="frame">
+            <div class="border">
+              <div class="image">
+                <img src="images/port7.jpg" height="275" width="auto" alt="" />
+            </div><!--end image-->
+              <div class="text">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Eun woo</div>
+            </div><!--end border-->
+          </div><!--end frame-->  
+
+        <div class="frame">
+            <div class="border">
+              <div class="image">
+                <img src="images/emily.jpg" height="275" width="auto" alt="" />
+            </div><!--end image-->
+              <div class="text">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Harvey</div>
+            </div><!--end border-->
+          </div><!--end frame--> 
+          
+          <div class="frame">
+            <div class="border">
+              <div class="image">
+                <img src="images/port16.png" height="275" width="auto" alt="" />
+            </div><!--end image-->
+              <div class="text">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Binibini</div>
+            </div><!--end border-->
+          </div><!--end frame-->  
+
+          <div class="frame">
+            <div class="border">
+              <div class="image">
+                <img src="images/port17.png" height="275" width="auto" alt="" />
+            </div><!--end image-->
+              <div class="text">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Solana</div>
+            </div><!--end border-->
+          </div><!--end frame--> 
+
+          <div class="frame">
+            <div class="border">
+              <div class="image">
+                <img src="images/port9.jpg" height="275" width="auto" alt="" />
+            </div><!--end image-->
+              <div class="text">&nbsp;&nbsp;Cole Sprouse</div>
+            </div><!--end border-->
+          </div><!--end frame-->  
+
+          <div class="frame">
+            <div class="border">
+              <div class="image">
+                <img src="images/port10.jpg" height="275" width="auto" alt="" />
+            </div><!--end image-->
+              <div class="text">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Shibata</div>
+            </div><!--end border-->
+          </div><!--end frame-->  
+
+          <div class="frame">
+            <div class="border">
+              <div class="image">
+                <img src="images/port11.jpg" height="275" width="auto" alt="" />
+            </div><!--end image-->
+              <div class="text">&nbsp;&nbsp;&nbsp;Kardashian</div>
+            </div><!--end border-->
+          </div><!--end frame-->  
+
+          <div class="frame">
+            <div class="border">
+              <div class="image">
+                <img src="images/port12.jpg" height="275" width="auto" alt="" />
+            </div><!--end image-->
+              <div class="text">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Cara</div>
+            </div><!--end border-->
+          </div><!--end frame-->  
+
+          <div class="frame">
+            <div class="border">
+              <div class="image">
+                <img src="images/port13.jpg" height="275" width="auto" alt="" />
+            </div><!--end image-->
+              <div class="text">&nbsp;&nbsp;&nbsp;&nbsp;Elizabeth</div>
+            </div><!--end border-->
+          </div><!--end frame-->  
+
+          <div class="frame">
+            <div class="border">
+              <div class="image">
+                <img src="images/port14.jpg" height="275" width="auto" alt="" />
+            </div><!--end image-->
+              <div class="text">&nbsp;&nbsp;&nbsp;&nbsp;Delevingne</div>
+            </div><!--end border-->
+          </div><!--end frame-->  
+
+    </div>
+
+    
+
+<!-- frame-->
+
+
+    <div id="painting">
+        <h1>~ P a i n t i n g ~</h1>
+        <h6>"Where Art Comes Alive"</h6>
+<div class="figurecontain">
+
+  <figure>
+    <div class="outerBevel">
+      <div class="flatSurface">
+        <div class="innerBevel">
+          <img src="images/paint12.png" class="paint">
+        </div>
+      </div>
+    </div>
+  </figure>
+
+          <figure>
+            <div class="outerBevel">
+              <div class="flatSurface">
+                <div class="innerBevel">
+                  <img src="images/paint2.png" width="342" height="326" class="paint";>
+                </div>
+              </div>
+            </div>
+          </figure>
+
+          <figure>
+            <div class="outerBevel">
+              <div class="flatSurface">
+                <div class="innerBevel">
+                  <img src="images/paint4.png"  class="paint">
+                </div>
+              </div>
+            </div>
+          </figure>
+
+          <figure>
+            <div class="outerBevel">
+              <div class="flatSurface">
+                <div class="innerBevel">
+                  <img src="images/paint3.png" class="paint">
+                </div>
+              </div>
+            </div>
+          </figure>
+
+          <figure>
+            <div class="outerBevel">
+              <div class="flatSurface">
+                <div class="innerBevel">
+                  <img src="images/paint11.png" class="paint">
+                </div>
+              </div>
+            </div>
+          </figure>
+
+          <figure>
+            <div class="outerBevel">
+              <div class="flatSurface">
+                <div class="innerBevel">
+                  <img src="images/paint6.png" class="paint">
+                </div>
+              </div>
+            </div>
+          </figure>
+
+          <figure>
+            <div class="outerBevel">
+              <div class="flatSurface">
+                <div class="innerBevel">
+                  <img src="images/paint8.png" class="paint">
+                </div>
+              </div>
+            </div>
+          </figure>
+
+          <figure>
+            <div class="outerBevel">
+              <div class="flatSurface">
+                <div class="innerBevel">
+                  <img src="images/paint10.png" class="paint">
+                </div>
+              </div>
+            </div>
+          </figure>
+
+          <figure>
+            <div class="outerBevel">
+              <div class="flatSurface">
+                <div class="innerBevel">
+                  <img src="images/paint9.png" class="paint">
+                </div>
+              </div>
+            </div>
+          </figure>
+
+          <figure>
+            <div class="outerBevel">
+              <div class="flatSurface">
+                <div class="innerBevel">
+                  <img src="images/paint7.png" class="paint">
+                </div>
+              </div>
+            </div>
+          </figure>
+
+          <figure>
+            <div class="outerBevel">
+              <div class="flatSurface">
+                <div class="innerBevel">
+                  <img src="images/paint1.png" width="342" height="326" class="paint">
+                </div>
+              </div>
+            </div>
+          </figure>
+
+          <figure>
+            <div class="outerBevel">
+              <div class="flatSurface">
+                <div class="innerBevel">
+                  <img src="images/paint5.png"  class="paint">
+                </div>
+              </div>
+            </div>
+          </figure>
+
+
+    </div>
+  </div>  
+
+
+    <div id="sketch">
+        <h1>~ S k e t c h ~</h1>
+        <h6>"Sketches come to life"</h6>
+    </div>
+
+    <div id="artist">
+        <h1>Artist Section</h1>
+        <p>This is the artist section.</p>
+    </div>
+
+    <!--end section-->
+
+</div>
+
+    
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Arielle Charlize. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

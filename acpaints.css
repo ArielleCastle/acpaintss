@@ -1,0 +1,612 @@
+@import url(https://use.fontawesome.com/releases/v6.4.2/css/all.css);
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+@import url('https://fonts.googleapis.com/css?family=Sacramento');
+@import url('https://fonts.googleapis.com/css?family=Parisienne|Playball');
+
+*{
+    margin: 4;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgba(255, 237, 215, 0.966);
+    padding:0;
+}
+
+.logo{
+    position: absolute;
+    left:3%;
+    width: 105px;
+    height: 105px;
+    top: 1%;
+    text-shadow: 0 0 5px white;
+}
+/*start of nav*/
+
+nav {
+    z-index: 999;
+    position: fixed;
+    width: 98.8%;
+    height: 13vh;
+    border-bottom-style: outset;
+    border-color: rgb(232, 156, 69);
+    border-width: 5px; /* Set the width of the border */
+    background-color: rgb(10, 7, 2);
+    display: flex;
+    justify-content: center; /*horizontally*/
+    justify-content: space-around; /* Space-around for equal spacing */
+    align-items: center; /*vertically*/
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.nav-transparent {
+    background-color: rgba(10, 7, 2, 0.756); /* Adjust transparency as needed */
+}
+
+nav ul li {
+    list-style: none;
+    display: inline;
+    margin: 25px;
+}
+
+nav ul li .options {
+    text-decoration: none;
+    font-size: 17px;
+    text-transform: uppercase;
+    color: rgb(210, 199, 199);
+    font-weight: 700;
+    font-family: Georgia, 'Times New Roman', Times, serif; /* Apply Merienda font to nav links */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Add text shadow for bolder appearance */
+}
+
+/*start of hover in nav*/
+.options{
+    position: relative;
+    text-decoration: none;
+}
+
+.options:after{
+    content: "";
+    position: absolute;
+    background-color: rgb(232, 156, 69);
+    height: 3px;
+    width: 0;
+    left:0;
+    bottom: -10px;
+    transition: 0.3s; 
+}
+
+.options:hover{
+    color: #ffee10;
+}
+
+.options:hover:after{
+    width: 100%
+}
+
+.options:before{
+    content: "";
+    position: absolute;
+    background-color: rgb(232, 156, 69);
+    height: 3px;
+    width: 0;
+    right:0;
+    top: -10px;
+    transition: 0.3s; 
+}
+
+.options:hover:before{
+    width: 100%
+}
+/*end of hover in nav*/
+
+/*start of icons*/
+
+nav div {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    position: absolute;
+    top: 8%;
+    left:90%;
+    transform: translate(-50%, -50%);
+}
+
+
+nav .icon{
+    top: 30px;
+    margin: 0px 2px; 
+    position: relative; 
+    display: block;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 32px;
+    background: #333;
+    border-radius: 50%;
+    font-size: 18px;
+    color: white;
+    transition: .5s;
+}
+
+.icon::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: #ffee10;
+    transition: .5s;
+    transform: scale(.9);
+    z-index: -1;
+  }
+  
+  .icon:hover::before {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px;
+  }
+  
+  .icon:hover {
+    color: #ffee10;
+    box-shadow: 0 0 5px #ffee10;
+    text-shadow: 0 0 5px pink;
+  }
+  /*end icon*/
+
+
+/*end of nav*/
+
+
+/*start of sliding image*/
+
+.slider{
+    top: 75px;
+    height:350px;
+    margin: auto;
+    position: relative;
+    width: 100%;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+}
+
+.slide-track{
+    display: flex;
+    width:calc(500px*14);
+    animation: scroll 40s linear infinite;
+}
+
+.slide-track:hover{
+    animation-play-state: paused;
+}
+
+@keyframes scroll {
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(calc(-250px*7));
+    }
+}
+
+.slide{
+    height: 500px;
+    width: 500px;
+    display: flex;
+    align-items: center;
+    padding: 15px; 
+    perspective: 100px;
+}
+
+.carousel {
+    width: 100%;
+    height: 100%; /* Set to match .slide height */
+    max-width: 100%; /* Set to match .slide width */
+    object-fit: cover; /* Maintain aspect ratio without warping */
+    overflow: hidden; /* Hide overflow */
+    transition: transform 1s;
+    position: relative;
+}
+
+.carousel:hover{
+    transform: translateZ(20px);
+}
+
+
+/*GRADIENT SHADOWS*/
+.slider::before,
+.slider::after{
+    background: linear-gradient(to right, rgb(0, 0, 0)0%,
+    rgba(255,255,255,0) 100%);
+    content: '';
+    height: 100%;
+    position: absolute;
+    width: 15%;
+    z-index:2;
+}
+
+.slider::before {
+    left:0;
+    top:0;
+}
+
+.slider::after{
+    right: 0;
+    top:0;
+    transform:rotateZ(180deg);
+}
+
+/*end of GRADIENT SHADOWS*/
+
+/*END of sliding image*/
+
+/**/
+
+
+
+/**/
+  /*start slide login form*/
+.bodybar{
+  z-index: 9999; /* Ensure a high z-index to appear in front */
+  position: fixed;
+  top:8%;
+  left: 50px;
+  right: 50px;
+  display: none;
+  margin:0;
+  padding: 0;
+  justify-content:center; 
+  align-items: center;
+  min-height: 100vh;
+  font-family: 'Jost' , sans-serif; 
+
+}
+
+  .mainbar{
+    width: 350px;
+    height: 450px;
+    background: red;
+    overflow: hidden;
+    background: url('images/3.jpg') center; /* Background image */
+    background-size: cover;
+    border-radius: 10px;
+    box-shadow: 50px 20px 50p #000;
+    border: 3px solid #272121; /* Added border: 2px solid black */
+}
+
+#chk{
+    display: none;
+   }
+
+   .signup{
+    position: relative; /*del*/
+    width: 100%;
+    height: 100%; 
+    }
+
+   label{
+    color: rgb(40, 31, 11);
+    font-size: 2.3em;
+    justify-content: center;
+    display: flex;
+    margin: 45px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .5s ease-in-out;
+   }
+
+   input{
+    width: 60%;
+    height: 30px;
+    background-color:#e0dede;
+    justify-content: center;
+    display:flex;
+    margin: 20px auto;
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #272121; /* Added border: 2px solid black */
+   }
+   button{
+    width:60%;
+    height: 40px;
+    margin: 10px auto;
+    justify-content: center;
+    display: block;
+    color: white;
+    background: rgb(100, 75, 47);
+    font-size: 1em;
+    font-weight: bold;
+    margin-top: 20px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    transition: .2s ease in;
+    cursor: pointer;
+    border: 1px solid #fcfcfc; /* Added border: 2px solid black */
+   }
+
+   button:hover{
+    background: #93650e;
+   }
+
+.login{
+    height: 460px;
+    background: url('images/2.jpg') center no-repeat; 
+    background-size: cover; 
+    border-radius: 60% / 10%;
+    transform: translateY(-10px); 
+    transition: .8s ease-in-out;
+}
+
+.login label{
+    color:#fcffe6;
+    transform: scale(.6);
+}
+
+#chk:checked ~ .login{
+    transform: translateY(-500px);
+}
+
+#chk:checked ~ .login label{
+    transform: scale(1);
+}
+
+#chk:checked ~ .signup label{
+    transform: scale(.6);
+}
+
+  /*end slide login form*/
+
+  /*message */
+  .contain {
+    position: relative;
+    display: flex;
+    align-items: flex-start; /* Align items vertically */
+    justify-content: flex-start; /* Center items horizontally */
+    height: 500px; /* Adjust height as needed */
+    margin-top: 100px;
+    text-align: justify;
+    font-family: 'Sacramento', cursive;
+    font-size: 35px;
+    font-weight: bold;
+    padding: 80px;
+    line-height: 1.5; /* Adjust line spacing as needed */
+    color: rgb(7, 19, 44);
+}
+/*message*/
+
+/*blur message*/
+.contain::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(images/br5555.png) center no-repeat;
+    background-size: cover;
+    background-position-y: 35%;
+    filter: blur(0px); /* Adjust the blur radius as needed */
+    z-index: -1; /* Ensure the blurred layer is behind the content */
+}
+/*end blur*/
+
+/*typewrite*/
+.typed-out {
+    position: absolute;
+    top: -30%;
+    left: 33%;
+    font-family: 'Sacramento', cursive;
+    font-weight: bold; 
+    color: rgb(66, 5, 5);
+    font-size:55px;
+    display: inline-block;
+    overflow: hidden; /* Ensures the text is hidden until the animation starts */
+    border-right: .15em solid3rgb(31, 22, 5); /* Creates the cursor effect */
+    white-space: nowrap; /* Ensures the text doesn't wrap */
+    margin: 0 ; /* Centers the text horizontally */
+    animation: typing 5s steps(45, end) ; /* Animation properties with infinite repetition */
+  }
+
+  @keyframes typing {
+        from { width: 0; } /* Start with no width */
+        to { width: 38%; } /* Gradually increase width to show all characters */
+      }
+
+
+      /*end of typewrite*/
+
+      /*scroll*/
+      html {
+        scroll-behavior: smooth;
+    }
+    /*end scroll*/    
+
+/*start section*/
+    #section{
+        text-align: center;
+    }
+/*end section*/
+
+#portrait {
+	font-family: 'Monserrat';
+    font-size: 25px;
+    line-height: 0.20; /* Adjust line spacing as needed */
+    color: rgb(2, 10, 37);
+    text-shadow: #fff;
+    background: #8b6b35;
+    background-size: cover; /* Ensure the background image covers the entire section */
+    height: 340vh; /* Set the height of the section to fill the viewport height */
+    box-shadow: inset 0 -10px 30px 10px rgba(0, 0, 0, 0.5), inset 0 10px 30px 10px rgba(0, 0, 0, 0.5); /* Adds inner shadow to top and bottom */
+    padding-top: 75px; /* Adjust this value to lower the text */
+}
+
+/*start frame portrait*/
+.frames-container {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr); /* 4 columns */
+    grid-template-rows: repeat(2, auto); /* 2 rows */
+    gap: 20px; /* Adjust as needed for spacing between frames */
+
+    justify-content: space-between; /* Adjust as needed */
+    margin: 5%;
+    margin-top: 20px; /* Adjust top margin as needed */
+    
+}
+
+.frame {
+  position: relative;
+  background:url('https://www.subtlepatterns.com/patterns/brickwall.png');
+  margin: 5px;
+  border:15px solid #222;
+  height:375px;
+  width:250px;
+  -webkit-box-shadow:  px 2px 3px 1px rgba(0, 0, 0, .5);
+  box-shadow:  10px 10px 10px 4px rgba(0, 0, 0, 0.3);
+
+  flex: 0 0 auto; /* Ensures flex items do not grow or shrink */
+  overflow: hidden; /* Ensures the image doesn't overflow its container */
+}
+
+.border {
+  background:rgb(2, 7, 28);
+  height:100%;
+  width:100%;
+  -webkit-box-shadow: inset 10px 10px 10px 4px rgba(0, 0, 0, .4);
+  box-shadow: inset 3px 7px 2px 5px rgba(0, 0, 0, .4);
+}
+
+.image {
+  overflow: hidden;
+  position:absolute;
+  height:250;
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center;    /* Center vertically */
+
+  left: -19px; /* Adjust this value to crop from the left */
+  right: 10px;
+  margin-left:30px;
+  margin-top:10px;
+  -webkit-box-shadow: inset 10px 10px 10px 4px rgba(0, 0, 0, .6);
+  box-shadow: inset 3px 7px 2px 5px rgba(0, 0, 0, .1);
+  border:2px inset #c9c9c9;
+}
+
+.text {
+  position:absolute;
+  margin-top:308px;
+  font-family: 'Playball', cursive;
+  font-size:25px;
+  margin-left:35px;
+  color: #ffffff;
+}
+/*end frame for portrait*/
+
+/*start painting*/
+#painting {
+	font-family: 'Monserrat';
+    font-size: 25px;
+    line-height: 0.20; /* Adjust line spacing as needed */
+    color: rgb(242, 236, 212);
+    text-shadow: #fff;
+    background: #8b3535;
+    background-size: cover; /* Ensure the background image covers the entire section */
+    height: 400vh; /* Set the height of the section to fill the viewport height */
+    box-shadow: inset 0 -10px 30px 10px rgba(0, 0, 0, 0.5), inset 0 10px 30px 10px rgba(0, 0, 0, 0.5); /* Adds inner shadow to top and bottom */
+    padding-top: 90px; /* Adjust this value to lower the text */
+}
+
+.figurecontain{
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    grid-template-rows: repeat(2, auto); /* 2 rows */
+    gap: 10px; /* Adjust gap between items as needed */
+    justify-items: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
+}
+
+figure {
+	width:						375px;
+	height:						375px;
+    position: relative;
+    justify-content: space-between; /* Adjust as needed */
+    margin: 20%;
+    margin-top: 20px; /* Adjust top margin as needed */
+   }
+
+.outerBevel { /* of frame */
+	box-shadow:				4px 6px 12px 0 black;
+	border-width:			5px;
+	border-style:			solid;
+	border-color:			rgb(109, 84, 58) rgb(24, 19, 13) rgb(24, 19, 13) rgb(109, 84, 58);
+	}
+
+.flatSurface { /* of frame */
+	border:						5px solid rgb(65, 40, 16);
+	}
+
+.innerBevel { /* of frame */
+	border-width:			5px;
+	border-style:			solid;
+	border-color:			rgb(24, 19, 13)	rgb(109, 84, 58) rgb(109, 84, 58) rgb(24, 19, 13);
+	}
+
+.paint { /* including mat and gold beveled edge of mat */
+    object-fit: cover;
+    display:					block;
+	clear:						both;
+	height:						100%;
+	width:						100%;
+	padding:					5.5% 5.5% 7% 5.5%; /* Mat width */
+	background-color:	rgb(255,249,224); 	/* Mat color */
+	border-width:			3px;	/* Gold edge of mat */
+	border-style:			solid;
+	border-color:			rgb(207, 166, 0) rgb(207, 166, 0) rgb(145, 110, 0) rgb(145, 110, 0);
+	}
+
+
+/*end painting*/
+
+/*start skectch*/
+#sketch {
+	font-family: 'Monserrat';
+    font-size: 25px;
+    line-height: 0.20; /* Adjust line spacing as needed */
+    color: rgb(242, 236, 212);
+    text-shadow: #fff;
+    background: #356b8b;
+    background-size: cover; /* Ensure the background image covers the entire section */
+    height: 380vh; /* Set the height of the section to fill the viewport height */
+    box-shadow: inset 0 -10px 30px 10px rgba(0, 0, 0, 0.5), inset 0 10px 30px 10px rgba(0, 0, 0, 0.5); /* Adds inner shadow to top and bottom */
+    padding-top: 90px; /* Adjust this value to lower the text */
+}
+
+/*end sketch*/
+
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: rgb(10, 7, 2);
+    color: #fff;
+    font-size: 14px;
+    margin-top: 500%;
+}
+
+
+
+
+  
+  
+
+        
+    
